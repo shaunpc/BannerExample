@@ -2,7 +2,7 @@ package com.spc.bannerexample;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -13,7 +13,7 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,7 +87,7 @@ public class MainActivity extends ActionBarActivity {
             super.onActivityCreated(bundle);
             // Gets the ad view defined in layout/ad_fragment.xml with ad unit ID set in
             // values/strings.xml.
-            AdView mAdView = (AdView) getView().findViewById(R.id.adView);
+            AdView mAdView = getView().findViewById(R.id.adView);
 
             // Add the test device whilst getting just test ads
             AdRequest adRequest = new AdRequest.Builder()
